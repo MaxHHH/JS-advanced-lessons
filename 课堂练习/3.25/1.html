@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>motherfucker</title>
+</head>
+<body>
+    3<div id = "div1" style="width: 100px;height: 50px;"></div>
+
+</body>
+    <script>
+            /*console.log("全局上下文-start");
+            var x = 1;
+            function foo(){
+                console.log("foo上下文");
+                var y = 2;
+                function bar() {
+                    console.log("bar上下文");
+                    var z = 3;
+                    console.log(x+y+z);
+                    console.log("bar上下文");
+                }
+                bar();
+                console.log("foo上下文-end");
+            }
+            foo();
+            console.log("全局上下文-end");*/
+
+
+            /*console.log("小明回家");
+            var xx =["书桌","书包","铅笔盒"];
+            console.log("在家-做作业中");
+            function goToStore(){
+                var yy = ["文具店老板","出售的文具"];
+                console.log("在文具店-买文具中");
+                console.log("在文具店买文具中 发现没带钱");
+                goToBank();
+                console.log("在文具店-买好文具 返回家");
+            }
+            function goToBank() {
+                var zz = ["银行职员","柜员机"];
+                console.log("在银行-取钱 返回文具店");
+            }
+            console.log("在家-做作业中 发现笔没油了");
+            goToStore();
+            console.log("在家-继续做作业");*/
+
+
+            /*var div1 = document.getElementById("div1");
+            var username = "zhangsan";
+            function foo(){
+                div1.onclick = function (){
+                    this.innerHTML = username;
+                }
+            }
+            foo();*/
+
+            /*function f(){
+                var getNumFuncs = [];
+                for(var i=0;i<10;i++){
+                    (function (j) {
+                        getNumFuncs[j] = function () {return j;};
+                    })(i);
+                }
+                return getNumFuncs;
+            }
+            var tmp = f();
+            tmp[3]();*/
+
+
+            /*function foo() {
+                var arr1 = []
+                for(var i = 0; i < 10;i++){
+                    arr1[i] = (function () {
+                        return i;
+                    })()
+                }
+                return arr1;
+            }
+            var arr2 = foo();
+            console.log(arr2);*/
+
+            /*function foo() {
+                var arr1 = [];
+                for(var i = 0;i<10; i++){
+                    (function (j) {
+                        arr1[j] = function(){
+                            return j;
+                        }
+                    })(i)
+                }
+                return arr1;
+            }
+            var arr2 = foo();
+            arr2[0]();*/
+
+
+           
+    </script>
+</html>

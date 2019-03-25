@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>任务2.2</title>
+</head>
+<body>
+        <input type="text" id="inNum">
+    <script>
+        (function () {
+            var nums ="赵钱孙李周吴郑王冯陈楮卫蒋沈韩杨朱秦尤许何吕施张孔曹严华金魏陶姜";
+            ("#inNum").bind('input propertychange', function () {
+                var a = ("#inNum").val();
+                console.log(nums[a]);
+            })
+        })
+    </script>
+
+</body>
+
+</html>

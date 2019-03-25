@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>任务2.1</title>
+</head>
+
+<body>
+    <script>
+        function copyArg(sz) {
+            var sz1 = new Array();
+            for (var i = 0; i < sz.length; i++) {
+                if (typeof(sz[i]) === 'string') {
+                    sz1[i] = sz[i].trim();
+                } 
+                else if (typeof(sz[i]) === 'boolean') {
+                    if (sz[i]) {
+                        sz1[i] = 1;
+                    } 
+                    else {
+                        sz1[i] = 0;
+                    }
+                } 
+                else if (typeof(sz[i]) === 'number') {
+                    sz1[i] = sz[i].toFixed(2);
+                }
+                 else {
+                    sz1[i] = sz[i];
+                }
+            }
+            return sz1;
+        }
+        var sz2 = new Array();
+        var sz3 = [" qwere ", true,  0.12345];
+        var sz4 = new Array();
+        sz4 = copyArg(sz3);
+        console.log(sz4);
+    </script>
+</body>
+
+</html>
