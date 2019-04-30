@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var obj1 = {z: 1};
+    var obj2 = Object.create(obj1);
+    
+    console.log(obj1.__proto__ == Object.prototype);
+    console.log(obj2.__proto__); //obj1
+    console.log(obj2.__proto__.__proto__);
+    console.log(obj2.__proto__.__proto__.__proto__);
+
+
+    var obj1 = {z: 1,sayhi: function(){
+        console.log(this.z);
+    }};
+    var obj2 = Object.create(obj1);
+
+
+    function Penson(username, age) {
+        this.username = username;
+        this.age = age;
+    }
+
+    var person1 = new Person("zhangsan",30);
+    var person2 = new Person("lisi", 20);
+    console.log(person1.__proto__ == person.__proto__);
+    console.log(person.__proto__ == Person.prototype);
+    person1.sayHi();
+    person2.sayHi();
+
+
+    function Penson(username, age) {
+        this.username = username;
+        this.age = age;
+    }
+    Person.prototype.sayHi = function() {
+        console.log(this.username);
+    }
+    var person = new Person("zhangssan", 30);
+    /*
+        Person.prototype = person.__proto__
+        Person.prototype.constructor == Person
+        Person.prototype.__proto__ == Object.prototype
+        Object.prototype.constructor = Object
+        Object.prototype.__proto__ === null
+    */
+    console.log(Person.prototype == person.__proto__);
+    console.log(Person.prototype.constructor);
+    console.log(Person.prototype.__proto__);
+
+
+//定义一个车(car)的对象，height,width,weight
+//创建一个小轿车的对象，继承车相关的属性，自己具有color，sitNum
+//create方法，以及构造函数的形式
+
+    var car = {
+        height: 150,
+        width: 200,
+        weight: 1000
+    };
+
+    var smallCar = Object.create(car);
+    smallCar.color = "red";
+    smallCar.smallcar = 4;
+    console.log(smallCar.height);
+    console.log(smallCar.weight);
+
+
+    function createSmallcar(color,seatNum) {
+        this.color = color;
+        this.seatNum = seatNum;
+    }
+
+    createSmallcar.prototype = car ;
+
+    var smallCar = new createSmallcar("red", 4 );
+</script>
+</html>
